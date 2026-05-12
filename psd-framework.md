@@ -1,6 +1,6 @@
 ---
 name: psd-framework
-description: Build or evaluate a structured product strategy using a three-phase framework: Positioning (vision), Segmentation (strategy), and Differentiation (execution). Use this skill whenever the user wants to define product strategy, evaluate market positioning, identify target segments, build a competitive differentiation table, or answer questions like "who should we build for", "how do we differentiate", "where do we play", or "what's our product strategy". Also trigger when user shares a positioning map, segmentation matrix, or competitive comparison and wants feedback. This skill should run whenever any strategic planning artifact is involved, even if the user doesn't explicitly say "product strategy".
+description: "Build or evaluate a structured product strategy using a three-phase framework: Positioning (vision), Segmentation (strategy), and Differentiation (execution). Use this skill whenever the user wants to define product strategy, evaluate market positioning, identify target segments, build a competitive differentiation table, or answer questions like 'who should we build for', 'how do we differentiate', 'where do we play', or 'what's our product strategy'. Also trigger when user shares a positioning map, segmentation matrix, or competitive comparison and wants feedback. This skill should run whenever any strategic planning artifact is involved, even if the user doesn't explicitly say 'product strategy'."
 ---
 
 # Product Strategy Skill
