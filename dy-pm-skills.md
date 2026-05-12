@@ -1,9 +1,103 @@
 ---
-name: psd-framework
-description: "Build or evaluate a structured product strategy using a three-phase framework: Positioning (vision), Segmentation (strategy), and Differentiation (execution). Use this skill whenever the user wants to define product strategy, evaluate market positioning, identify target segments, build a competitive differentiation table, or answer questions like 'who should we build for', 'how do we differentiate', 'where do we play', or 'what's our product strategy'. Also trigger when user shares a positioning map, segmentation matrix, or competitive comparison and wants feedback. This skill should run whenever any strategic planning artifact is involved, even if the user doesn't explicitly say 'product strategy'."
+name: dy-pm-skills
+description: "Denny's PM skill suite. Routes to one of two frameworks based on the argument passed. Use 'validation' to stress-test a product problem statement (checks if it's a real human motivation or a dressed-up mechanism). Use 'strategy' to build or evaluate a product strategy using the Positioning-Segmentation-Differentiation framework. Trigger when the user invokes /dy-pm-skills validation or /dy-pm-skills strategy, or when context clearly matches one of the two frameworks."
 ---
 
-# Product Strategy Skill
+# dy-pm-skills
+
+Denny's PM skill suite. Two frameworks, one skill.
+
+## Routing
+
+Read the argument passed:
+
+- `validation` → run the **Problem Validation** framework below
+- `strategy` → run the **PSD Strategy** framework below
+- If no argument or ambiguous → ask: "Which framework? `validation` to stress-test a problem statement, `strategy` to build a product strategy."
+
+---
+
+---
+
+# FRAMEWORK 1: Problem Validation (`validation`)
+
+A stress-test framework for product problem statements. The goal is not to find a better-sounding answer — it's to find the true one.
+
+**Core principle:** A real problem is felt, not theorized. If a user wouldn't use your words to describe what they're experiencing, you haven't found the problem yet — you've found the mechanism between the problem and the solution.
+
+## The Three Tests
+
+### Test 1 — The Language Test
+> Would a real user say this out loud, unprompted?
+
+Ask: if you stopped a user on the street and asked "what's wrong?", would they use these words?
+
+- "I want self-directed access to on-demand content" → fail
+- "I'm bored" → pass
+
+If the language is analytical, abstract, or sounds like a product review, it's a mechanism or a rationalization — not the problem.
+
+**Flag:** rewrite in plain, felt language. One sentence. No jargon.
+
+---
+
+### Test 2 — The Body Test
+> Can you feel this problem physically or emotionally?
+
+Boredom: yes. Frustration: yes. "Asymmetric access to broadcast": no.
+
+Real problems live in the body — restlessness, anxiety, embarrassment, desire, fear, hunger. If the problem statement produces no felt response, it's sitting at the wrong level.
+
+**Flag:** ask what emotion or physical state the user is in when they experience this problem. That state is closer to the real problem than any analytical framing.
+
+---
+
+### Test 3 — The Mechanism Test
+> Is this the problem, or the path between the problem and the solution?
+
+Entertainment is not the problem — it's the mechanism YouTube uses to solve boredom.
+Distribution is not the problem — it's the mechanism creators use to solve for money and fame.
+
+Ask: if this "problem" disappeared, would users still have the underlying issue? If yes, what you have is a mechanism.
+
+**Flag:** strip the mechanism. What raw need or pain existed before this product category existed?
+
+---
+
+## Output Format (validation)
+
+For each problem statement provided:
+
+1. **Run all three tests.** Pass or fail each, with one sentence of reasoning.
+2. **If any test fails**, restate the problem in truer language — felt, plain, pre-solution.
+3. **Separate demand-side and supply-side** if the product serves both. They almost always have different real problems.
+4. **End with a one-line verdict:** is this a real problem statement or a mechanism?
+
+Do not offer encouragement. Do not soften a fail into a partial pass. The value of this framework is precision.
+
+---
+
+## Example (validation)
+
+**Stated problem:** "YouTube solves the need for on-demand, self-directed video consumption."
+
+| Test | Result |
+|---|---|
+| Language test | Fail — no user says "self-directed video consumption" |
+| Body test | Fail — no felt state, purely analytical |
+| Mechanism test | Fail — on-demand video is the solution, not the problem |
+
+**Restated (demand-side):** Boredom. Users open YouTube because they have unstructured time and want entertainment — and sometimes knowledge, but mostly entertainment.
+
+**Restated (supply-side):** Money and recognition. Creators upload because they want income or an audience.
+
+**Verdict:** The original statement describes the mechanism, not the problem.
+
+---
+
+---
+
+# FRAMEWORK 2: PSD Strategy (`strategy`)
 
 A structured three-phase framework for building or evaluating product strategy. Developed from the PM practice of Denny Yusuf, referencing Michael Porter's segmentation approach and Shreyas Doshi's product thinking.
 
@@ -148,9 +242,7 @@ Write 2–3 sentences summarizing:
 
 ---
 
-## Guard Rails
-
-Apply these consistently across all three phases:
+## Guard Rails (strategy)
 
 - **No vanity positioning.** Axes and factors must reflect user decision criteria, not product strengths.
 - **No cherry-picked competitors.** Always include the strongest archetype, even if unflattering.
@@ -160,7 +252,7 @@ Apply these consistently across all three phases:
 
 ---
 
-## Output Format
+## Output Format (strategy)
 
 Deliver each phase sequentially. Do not combine phases into a single artifact — they answer different questions and may have different audiences.
 
