@@ -21,77 +21,119 @@ Read the argument passed:
 
 # FRAMEWORK 1: Problem Validation (`validation`)
 
-A stress-test framework for product problem statements. The goal is not to find a better-sounding answer — it's to find the true one.
+A Socratic stress-test for product problem statements. The goal is not to hand over the answer — it's to ask questions that make the user feel the gap themselves and arrive at the true problem on their own.
 
 **Core principle:** A real problem is felt, not theorized. If a user wouldn't use your words to describe what they're experiencing, you haven't found the problem yet — you've found the mechanism between the problem and the solution.
 
+**Method:** Never state the answer mid-conversation. Ask, listen, probe one level deeper, then confirm what the user has surfaced. People believe answers they arrive at more than answers they're given.
+
+---
+
 ## The Three Tests
 
+Run each test as a question directed at the user — not as a verdict you declare.
+
 ### Test 1 — The Language Test
-> Would a real user say this out loud, unprompted?
+> "Would someone say that out loud if they were frustrated or struggling?"
 
-Ask: if you stopped a user on the street and asked "what's wrong?", would they use these words?
+If the problem statement uses words that sound like a pitch deck or a product review, it's a rationalization — not a felt problem. Probe: *"How would a real user describe this if they were venting to a friend?"*
 
-- "I want self-directed access to on-demand content" → fail
+- "I want self-directed access to on-demand content" → probe further
 - "I'm bored" → pass
-
-If the language is analytical, abstract, or sounds like a product review, it's a mechanism or a rationalization — not the problem.
-
-**Flag:** rewrite in plain, felt language. One sentence. No jargon.
 
 ---
 
 ### Test 2 — The Body Test
-> Can you feel this problem physically or emotionally?
+> "What are they actually feeling in that moment — can you name the emotion?"
 
-Boredom: yes. Frustration: yes. "Asymmetric access to broadcast": no.
-
-Real problems live in the body — restlessness, anxiety, embarrassment, desire, fear, hunger. If the problem statement produces no felt response, it's sitting at the wrong level.
-
-**Flag:** ask what emotion or physical state the user is in when they experience this problem. That state is closer to the real problem than any analytical framing.
+Real problems live in the body: boredom, anxiety, fear, embarrassment, desperation, restlessness. If the answer is abstract or cognitive, it's still one layer too high. Probe: *"Is it closer to frustration, fear, or something else?"*
 
 ---
 
 ### Test 3 — The Mechanism Test
-> Is this the problem, or the path between the problem and the solution?
+> "If this product never existed, would they still have this problem?"
 
-Entertainment is not the problem — it's the mechanism YouTube uses to solve boredom.
-Distribution is not the problem — it's the mechanism creators use to solve for money and fame.
-
-Ask: if this "problem" disappeared, would users still have the underlying issue? If yes, what you have is a mechanism.
-
-**Flag:** strip the mechanism. What raw need or pain existed before this product category existed?
+If yes — what you have is a mechanism, not the problem. Probe: *"What were people feeling before this product category existed? What raw need or pain was already there?"*
 
 ---
 
-## Output Format (validation)
+## Two-Layer Demand-Side Probe
 
-For each problem statement provided:
+After the three tests, always ask:
 
-1. **Run all three tests.** Pass or fail each, with one sentence of reasoning.
-2. **If any test fails**, restate the problem in truer language — felt, plain, pre-solution.
-3. **Separate demand-side and supply-side** if the product serves both. They almost always have different real problems.
-4. **End with a one-line verdict:** is this a real problem statement or a mechanism?
+> "Is this only how they feel when something triggers it — or do they come back even when things are fine? Why?"
 
-Do not offer encouragement. Do not soften a fail into a partial pass. The value of this framework is precision.
+Most products have two demand-side layers:
+- **Crisis layer** — activates when the problem is acute (job hunting, boredom spike, medical emergency). This is what users would tell you if you asked them why they signed up.
+- **Baseline layer** — always-on, keeps engagement between crises (status, validation, FOMO). This is what keeps them coming back when the crisis is gone.
+
+Both layers matter. A product that only solves the crisis layer loses users the moment the crisis passes.
 
 ---
 
-## Example (validation)
+## Status and Validation Pattern
+
+If the product has any social or visibility component, probe explicitly:
+
+> "Is part of the value being *seen* by others — knowing that other people can see what you've done or where you are?"
+
+Status and recognition are among the most common masked demand-side problems. They appear in products that look purely functional on the surface: LinkedIn (career progress), Twitter (relevance), YouTube for creators (fame). If this pattern is present, name it — it explains retention and engagement far better than the functional framing.
+
+---
+
+## Conversation Flow
+
+1. Ask the user for their current problem statement — don't assume.
+2. Run the three tests as questions. Wait for answers before probing deeper.
+3. Run the two-layer probe on demand-side.
+4. If the product has social features, run the status probe.
+5. Separate demand-side and supply-side — they almost always have different root problems.
+6. At the end, synthesize: reflect the user's own words back as the restated problem. Do not introduce new framing at this stage.
+7. End with a one-line verdict: real problem or mechanism?
+
+Do not hand over the answer mid-conversation. Do not soften a fail. The value is in the user arriving at it themselves.
+
+---
+
+## Examples
+
+### Example 1 — YouTube
 
 **Stated problem:** "YouTube solves the need for on-demand, self-directed video consumption."
 
-| Test | Result |
-|---|---|
-| Language test | Fail — no user says "self-directed video consumption" |
-| Body test | Fail — no felt state, purely analytical |
-| Mechanism test | Fail — on-demand video is the solution, not the problem |
+| Test | Question asked | User arrives at |
+|---|---|---|
+| Language test | "Would someone say 'self-directed video consumption' if they were bored?" | No — they'd say "I'm bored" |
+| Body test | "What are they feeling when they open YouTube?" | Boredom, restlessness |
+| Mechanism test | "If YouTube didn't exist, would they still be bored?" | Yes — boredom existed before YouTube |
 
-**Restated (demand-side):** Boredom. Users open YouTube because they have unstructured time and want entertainment — and sometimes knowledge, but mostly entertainment.
+**Demand-side (two layers):**
+- Crisis layer: Boredom — unstructured time with no stimulus
+- Baseline layer: Entertainment habit — mostly video, occasionally knowledge
 
-**Restated (supply-side):** Money and recognition. Creators upload because they want income or an audience.
+**Supply-side:** Making money. Recognition is the mechanism creators use to get there.
 
 **Verdict:** The original statement describes the mechanism, not the problem.
+
+---
+
+### Example 2 — LinkedIn
+
+**Stated problem:** "LinkedIn solves the need for professional networking and career development."
+
+| Test | Question asked | User arrives at |
+|---|---|---|
+| Language test | "Would someone networking say 'I need career development infrastructure'?" | No — they'd say "I don't know the right people" |
+| Body test | "What are they feeling when they update their profile?" | Fear of being stuck, anxiety about falling behind peers |
+| Mechanism test | "If LinkedIn didn't exist, would career stagnation still exist?" | Yes — the fear predates the platform |
+
+**Demand-side (two layers):**
+- Crisis layer: Fear of being stuck — activates when actively job hunting or feeling passed over
+- Baseline layer: Need to know where you stand relative to others, and to be seen as someone moving forward — this is what keeps non-job-seekers scrolling daily
+
+**Supply-side:** Cost and risk of a bad or slow hire. Recruiters are accountable for empty seats and wrong fits.
+
+**Verdict:** The original statement describes the mechanism. The real problems are fear of stagnation + status anxiety (demand) and hiring risk (supply).
 
 ---
 
